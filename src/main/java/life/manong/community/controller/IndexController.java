@@ -6,10 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class HelloController {
-    @GetMapping("/hello")
-    public String hello(@RequestParam(name = "name")String name, Model model){
-        model.addAttribute("name",name);
-        return "hello";//找到名为hello的html页面
+public class IndexController {
+    @GetMapping("/")
+    public String index(){
+        return "index";//访问名为hello的html页面
     }
 }
